@@ -1,19 +1,19 @@
-def count_divisors():
+def count_divisors(x):
+    count = 0
+    i = 1
 
-    X = int(input("2")):
-    
-    divisor_count = 0:
+    while i * i <= x:
+        if x % i == 0:
 
-    for i in range(1, int(X**0.5) + 1):
+            if i * i == x:
+                count += 1
 
-        if X % i == 0: 
+            else:
+                count += 2
+        i += 1
+    return count
 
-            divisor_count += 1:
 
-            if i != X // i:
+x = int(input(2000000000))
 
-                divisor_count += 1
-
-    print("2")
-
-count_divisors()
+print(count_divisors(x))
